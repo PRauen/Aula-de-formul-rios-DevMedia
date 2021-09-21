@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form method="GET" action=" ">
+        <!-- No atributo "action" é colocado o endereço para onde o formulário deve ser enviado. -->
+
+        <fieldset>
+            <legend> Conta </legend>
+                <div>
+                    <label>E-mail: </label>
+                    <input type="email" name="email" maxlength="50" required>
+                    <!--O atributo "name" é usado para identificar a informação que está sendo enviada no formulário. 
+                        O atributo "required" é utilizado para tornar 1 ou mais campos do formulário obrigatório. 
+                        Ambos podem ser, e normalmente são, utilizados mais de vez no formulário-->
+                </div>
+
+                <div>
+                    <label>Senha: </label>
+                    <input type="password" name="senha" minlength="6" required>
+                </div>           
+        </fieldset>          
+        
+        <fieldset>
+            <legend> Dados Pessoais </legend>
+                <div>
+                    <label>Nome: </label>
+                    <input type="text" placeholder="Ex: Pedro Henrique" name="nome">
+                    <!-- "placeholder" é uma tag usada para dar um exemplo
+                    de como o usuário pode preencher a lacuna do formuláriro. -->
+                </div>
+
+                <div>
+                    <label>Telefone: </label>
+                    <input type="text" placeholder="Ex: (99) 9.9999-9999" name="tel">
+                </div>
+
+                <div>
+                    <label>Data de Nascimento: </label>
+                    <input type="date" name="data-nascimento">
+                </div>
+
+                <div>
+                    <label>Sexo: </label>
+                    <input type="radio" name="sexo" checked /> Masculino
+                    <input type="radio" name="sexo"/> Feminino
+                    
+                    <!-- O input "radio" é usado para criar opções de seleção no formulário.
+                    O atributo "name" usado junto com o "radio", serve para que apenas uma das 
+                    opções seja selecionada por vez.
+                    O atributo "checked" é usado para manter uma das opções disponíveis já marcada.-->
+                </div>
+
+                <div>
+                    <label>Foto de Perfil </label>
+                    <input type="file" accept="image/*" name="foto-perfil">
+                </div>               
+        </fieldset>
+
+        <fieldset>
+            <legend> Endereço </legend>
+
+                <div>
+                    <label>Rua: </label>
+                    <input type="text" name="endereço-rua">
+                </div>
+
+                <div>
+                    <label>Complemento: </label>
+                    <input type="text" name="endereço-complemento">
+                </div>
+
+                <div>
+                    <label>Número: </label>
+                    <input type="number" min="1" max="999999" name="endereço-número">
+                </div>
+
+                <div>
+                    <label>Cidade: </label>
+                    <input type="text" name="endereço-cidade">
+                </div>
+
+                <div>
+                    <label>Estado: </label>
+                    <select name="endereço-estado">
+                        <option value="SP">São Paulo</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="BA">Bahia</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                    </select>
+                <!--  A tag "select" cria uma caixa de seleção onde, através das tags
+                    "option", poderemos selecionar uma opção para enviar com o nosso
+                    formulário. -->
+                </div>
+        </fieldset>
+
+        <fieldset>
+            <legend> Anúncio </legend>
+
+                <div>
+                    <label>Como conheceu a Hello Pizza? </label>
+                    <textarea maxlength="256" name="como-conheceu" placeholder="Conte-nos como você ficou sabendo da nossa pizzaria"></textarea>
+                    <!-- Com o atributo "textarea" criamos um campo para o usuário digitar um texto com mais de uma linha, 
+                    diferente do atributo "text", e com o atributo "maxlength" conseguimos controlar o tamanho máximo desse texto. -->
+                </div>
+
+                <div>
+                    <label>Desejo receber ofertas por e-mail. </label>
+                    <input type="checkbox" name="receber-ofertas" checked>
+                </div>
+        </fieldset>    
+
+        <input type="submit" value=" Enviar ">
+        <!-- <button type="submit"> Enviar </button>
+        O botão "enviar" pode ser feito de duas formas, com a tag "input" ou com a tag "button". -->
+        
+    </form>
+</body>
+</html>
