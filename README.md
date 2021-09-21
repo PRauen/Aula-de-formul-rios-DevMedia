@@ -1,2 +1,2 @@
-# Aula-de-formul-rios-DevMedia
+# Aula-de-formulários-DevMedia
 Pequeno projeto para desenvolvimento de um formulário simples.
